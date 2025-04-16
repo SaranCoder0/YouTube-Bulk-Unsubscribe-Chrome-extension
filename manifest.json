@@ -1,0 +1,28 @@
+{
+   "action": {
+      "default_popup": "./popup.html",
+      "default_title": "Unsubscriby for Youtube"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "js": [ "ExtPay.js" ],
+      "matches": [ "https://extensionpay.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "js": [ "ExtPay.js", "common.js", "content.js" ],
+      "matches": [ "https://www.youtube.com/feed/channels" ]
+   } ],
+   "description": "The easiest and most complete way to unsubscribe all your Youtube Channels",
+   "icons": {
+      "128": "/images/128x128.png",
+      "32": "/images/32x32.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv4MJLg6onbrv5bVq7LPMxXzeCfCLh9yYNwI0BrAymxNTGBrFOZer2dX0Xv9PhgOjTWRNfzgU7PJrFAIhXgh+l3I+No05qYqT9KwcP3klksxqSRWjXOvfVr1GtxJwpyDI76DMPa985dg3Ag9cA7Vq5gQ/Bcih3Jgw56GH4GoMGcQEAmrW6FpXdXg7jx4dawsieR98KjWxktIr0nCQG+kokqqiQF3mzuE0ly5DBGU7VdvbIXE5nZVk/plFqLoa0ioPE8LNUGxTURvvBALJgL9+8coi06iI2C5wRau+C1VW52wtblai9Wq7gGvu0D8eH+VZbK6zStxmmdRXDAo/WbRNUQIDAQAB",
+   "manifest_version": 3,
+   "name": "Unsubscriby for Youtube",
+   "permissions": [ "storage", "notifications" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.0.4"
+}

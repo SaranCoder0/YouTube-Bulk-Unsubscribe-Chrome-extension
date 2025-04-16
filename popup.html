@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unsubscriby for Youtube</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="fontawesome/css/all.min.css" rel="stylesheet"> <!--load all styles -->
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container-fluid p-3" id="main-content">
+        <div class="d-flex flex-column gap-3">
+            <!-- Header Section -->
+            <div class="text-center mb-2">
+                <h4 class="mb-0">Unsubscriby for Youtube</h4>
+                <small class="text-muted">Version: <span id="ext-version"></span></small>
+            </div>
+            
+            <!-- Main Action Section -->
+            <div class="d-grid">
+                <button class="btn btn-primary btn-lg" id="btnStart">
+                    <i class="fas fa-play-circle me-2"></i>Unsubscribe!
+                </button>
+            </div>
+            
+            <!-- Free Version Alert -->
+            <div class="alert alert-info py-2" id="alert-upgrade" role="alert">
+                <i class="fas fa-info-circle me-2"></i>
+                <span>This free version unsubscribes <strong><span class="span-subs-limit">x</span></strong> subscriptions at a time</span>
+            </div>
+            
+            <!-- Premium Section -->
+            <div class="card border-primary">
+                <div class="card-header bg-transparent d-flex justify-content-between align-items-center">
+                    <span><i class="fas fa-crown" style="color: gold"></i> Premium Features</span>
+                    <button class="btn btn-sm btn-outline-primary" id="btnUpgradeCollapse" data-bs-toggle="collapse" data-bs-target="#premium-features">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="collapse" id="premium-features">
+                    <div class="card-body py-2">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item px-2 py-2 border-0"><i class="fas fa-check-circle me-2" style="color:limegreen"></i>Unsubscribe all in one shot!</li>
+                            <li class="list-group-item px-2 py-2 border-0"><i class="fas fa-check-circle me-2" style="color:limegreen"></i>Select which channels you want to unsubscribe from!</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-transparent text-center">
+                        <button class="btn btn-primary" id="btnUpgrade">
+                            <i class="fas fa-shopping-cart me-2"></i>Purchase
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Messages Section -->
+            <div class="messages">
+                <div id="alert-loading-placeholder-model" class="alert alert-info placeholder-wave" style="display: none;">
+                    <span class="placeholder col-9"></span>
+                    <span class="placeholder col-6"></span>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <div class="mt-auto text-center">
+                <a href="https://buymeacoffee.com/limbuscode" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary">
+                    <i class="fas fa-coffee me-1"></i>Donate
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="ExtPay.js"></script>
+    <script src="common.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>
